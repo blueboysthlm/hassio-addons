@@ -13,7 +13,7 @@ RUN set -ex \
  && apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         curl jq \
- && curl -L https://github.com/badaix/snapcast/releases/download/v${SNAPCAST_VERSION}/snapclient_${SNAPCAST_VERSION}_${BUILD_ARCH}.deb -o /tmp/snapcastclient.deb \
+ && curl -L https://github.com/badaix/snapcast/releases/download/v0.15.0/snapclient_0.15.0_armhf.deb -o /tmp/snapcastclient.deb \
  && dpkg -i /tmp/snapcastclient.deb || DEBIAN_FRONTEND=noninteractive apt-get install -f -y\
  && apt-get purge --auto-remove -y \  
         curl \
